@@ -1,0 +1,81 @@
+@import 'https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css';
+
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Cursive', sans-serif;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2em;
+}
+
+.header-text {
+    animation: slide-in 2s ease-out forwards;
+}
+
+.header-image {
+    width: 50%;
+    height: auto;
+    border-radius: 50%; /* This will make the image circular */
+    animation: fade-in 2s ease-out forwards;
+}
+
+.cta-button {
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 1em;
+    cursor: pointer;
+    animation: color-change 2s infinite;
+}
+
+h1 {
+    margin-top: 2em;
+    animation: fade-in 2s ease-out forwards;
+}
+
+p {
+    margin-bottom: 1em;
+    animation: slide-in 2s ease-out forwards;
+}
+
+.animated-text {
+    animation: color-change 2s infinite;
+}
+
+@keyframes slide-in {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes color-change {
+    0% { color: white; }
+    50% { color: grey; }
+    100% { color: white; }
+}
